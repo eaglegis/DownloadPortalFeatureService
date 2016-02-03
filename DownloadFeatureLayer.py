@@ -479,7 +479,6 @@ if __name__ == '__main__':
         argv = sys.argv
         # Delete the first argument, which is the script
         del argv[0]
-        print(argv)  
     # Logging
     if (enableLogging == "true"):
         # Setup logging

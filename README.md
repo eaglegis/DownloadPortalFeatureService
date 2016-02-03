@@ -7,17 +7,25 @@ Downloads a feature service (As file geodatabase, shapefile or CSV) from a porta
 * New Mode - Copies data over. Requires no locks on geodatabase datasets being overwritten. 
 
 
+## Features
+
+* Download data as file geodatabase, shapefile or CSV.
+* Run with or without ArcGIS Desktop installation.
+* Overwrite or update existing dataset.
+* Run as automated task and log start/end times.
+
+
 ## Requirements
 
 * Internet access
-* [Python 3.4](https://www.python.org/downloads/release/python-340)
+* [Python 3.4](https://www.python.org/downloads/release/python-340/)
 * ArcGIS Online/Portal named user
 * Access to ArcGIS Online/Portal hosted feature service
 
 
-## Instructions
+## Installations Instructions
 
-* Install [Python 3.4](https://www.python.org/downloads/release/python-340) on machine.
+* Install [Python 3.4](https://www.python.org/downloads/release/python-340/) on machine.
 * Fork/clone the repository or download the .zip file.
 * Create a batch file based off the examples provided [here](/Examples).
 * Set the parameters in the batch file:
