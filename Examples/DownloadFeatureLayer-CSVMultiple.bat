@@ -1,9 +1,9 @@
-REM ----- Download Feature Layer - FGDB -----
+REM ----- Download Feature Layer - CSV Multiple -----
 C:\Python34\python "C:\Development\Python for ArcGIS Tools\Eagle Download Portal Feature Service\DownloadFeatureLayer.py" ^
  "https://svcs-eaglegis.maps.arcgis.com" ^
  "eaglegis" ^
  "*****" ^
- "db12d3e36a4a43d580ccd4683c5edd34" ^
- "C:\Temp\Data.gdb" ^
- "File Geodatabase" ^
- "Existing"
+ "6127c11476d54310a82ae2ed9badb82e,6453aa95dcb947c6af623e8b0bed60d6" ^
+ "C:\Temp" ^
+ "CSV" ^
+ "New"

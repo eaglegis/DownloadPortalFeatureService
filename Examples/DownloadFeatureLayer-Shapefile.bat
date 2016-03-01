@@ -1,9 +1,9 @@
 REM ----- Download Feature Layer - Shapefile -----
-C:\Python34\python "C:\Development\Python for ArcGIS Tools\ArcGIS Online & Portal Toolkit\DownloadFeatureLayer.py" ^
+C:\Python34\python "C:\Development\Python for ArcGIS Tools\Eagle Download Portal Feature Service\DownloadFeatureLayer.py" ^
  "https://svcs-eaglegis.maps.arcgis.com" ^
  "eaglegis" ^
  "*****" ^
- "2003fb4881cb433082e630b6bfcc1474" ^
+ "db12d3e36a4a43d580ccd4683c5edd34" ^
  "C:\Temp" ^
  "Shapefile" ^
  "New"

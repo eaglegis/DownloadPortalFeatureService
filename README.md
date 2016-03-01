@@ -18,7 +18,7 @@ Downloads a feature service (As file geodatabase, shapefile or CSV) from a porta
 ## Requirements
 
 * Internet access
-* [Python 3.4](https://www.python.org/downloads/release/python-340/)
+* [Python 2.7](https://www.python.org/downloads/release/python-270/) or [Python 3.4](https://www.python.org/downloads/release/python-340/)
 * ArcGIS Online/Portal named user
 * Access to ArcGIS Online/Portal hosted feature service
 
@@ -33,7 +33,7 @@ Downloads a feature service (As file geodatabase, shapefile or CSV) from a porta
 	* 1st parameter - ArcGIS/Portal site URL.
 	* 2nd parameter - ArcGIS/Portal named user.
 	* 3rd parameter - ArcGIS/Portal named user password.
-	* 4th parameter - ArcGIS/Portal hosted feature service ID.
+	* 4th parameter - ArcGIS/Portal hosted feature service ID or set of IDs.
 	* 5th parameter - Location of where to export data to.
 	* 6th parameter - Data format to download - file geodatabase, shapefile or CSV.
 	* 7th parameter - New or existing mode.
