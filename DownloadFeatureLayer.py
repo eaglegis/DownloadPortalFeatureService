@@ -5,9 +5,9 @@
 #             New Mode - Copies data over. Requires no locks on geodatabase datasets being overwritten.      
 # Author:     Shaun Weston (shaun_weston@eagle.co.nz)
 # Date Created:    30/09/2014
-# Last Updated:    01/03/2016
+# Last Updated:    12/05/2017
 # Copyright:   (c) Eagle Technology
-# ArcGIS Version:   ArcMap 10.3+ or ArcGIS Pro 1.1+ (Need to be signed into a portal site)
+# ArcGIS Version:   ArcMap 10.2+ or ArcGIS Pro 1.1+ (Need to be signed into a portal site)
 # Python Version:   2.7 or 3.4
 #--------------------------------
 
@@ -37,7 +37,7 @@ proxyURL = ""
 # Output
 output = None
 # ArcGIS desktop installed
-arcgisDesktop = "false"
+arcgisDesktop = "true"
 
 # If ArcGIS desktop installed
 if (arcgisDesktop == "true"):
@@ -84,7 +84,10 @@ def mainFunction(portalUrl,portalAdminName,portalAdminPassword,itemIDs,workspace
         # For each item ID specified
         for itemID in itemIDs:
             printMessage("Exporting feature layer to " + outputFormat + ". Item ID - " + itemID + "...","info")
-
+            # Logging
+            if (enableLogging == "true"):
+                logger.info("Exporting feature layer to " + outputFormat + ". Item ID - " + itemID + "...")
+                            
             # Setup parameters for export   
             dict = {}
             dict['f'] = 'json'
@@ -181,7 +184,11 @@ def mainFunction(portalUrl,portalAdminName,portalAdminPassword,itemIDs,workspace
                         printMessage("Downloading data zip file to temporary directory...","info")
 
                         dataURL = portalUrl + "/sharing/rest/content/items/" + exportItemId + "/data" + "?token=" + token
-                        
+                        printMessage(dataURL + "...","info")
+                        # Logging
+                        if (enableLogging == "true"):
+                            logger.info(dataURL + "...")
+            
                         # Download the file from the link
                         file = urllib2.urlopen(dataURL)
         
@@ -318,7 +325,7 @@ def mainFunction(portalUrl,portalAdminName,portalAdminPassword,itemIDs,workspace
             if output:
                 # If ArcGIS desktop installed
                 if (arcgisDesktop == "true"):
-                    arcpy.SetParameterAsText(1, output)
+                    arcpy.SetParameterAsText(7, output)
                 # ArcGIS desktop not installed
                 else:
                     return output 
